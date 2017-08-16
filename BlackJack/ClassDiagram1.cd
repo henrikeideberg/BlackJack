@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BlackJack.BasicEvent" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>AbstractClasses\BasicEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.Participant" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAABAAAAAAAACAAQAAAAAABAgEAAAAAAAAAA=</HashCode>
+      <FileName>AbstractClasses\Participant.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BlackJack.App" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.AllHandsEvent" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAgAAAA=</HashCode>
+      <FileName>EventClasses\AllHandsEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.DeckCreatedEvent" Collapsed="true">
+    <Position X="3" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>EventClasses\DeckCreatedEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.DeckShuffledEvent" Collapsed="true">
+    <Position X="5.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EventClasses\DeckShuffledEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.GameStartStopEvent" Collapsed="true">
+    <Position X="0.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>EventClasses\GameStartStopEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.HumanPlayerActionEvent" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>EventClasses\HumanPlayerActionEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.ParticipantEvent" Collapsed="true">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAACAAQAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>EventClasses\ParticipantEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.ComputerPlayerSetup" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgAgFAAAACEAAAAICACACAACABAAAAAAJQAAAEAAICE=</HashCode>
+      <FileName>Forms\ComputerPlayerSetup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.DealerSetup" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACIAAAACAAAAAIAACBgAACAAAAAAAAAQAAAEAAABA=</HashCode>
+      <FileName>Forms\DealerSetup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.PlayerSetup" Collapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAgAACAAAAAAAACAAABCAAAEAAAACAAAAEABAAQ=</HashCode>
+      <FileName>Forms\PlayerSetup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAJAAAAAAgAAAAAAAg=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BlackJack.ComputerPlayer" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAIAAABAABAEAQAAAAAAAAACAAQCAAAAAAAAAAA=</HashCode>
+      <FileName>ObjectClasses\ComputerPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.Dealer" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAADAAAAAAAAAAAAAABAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>ObjectClasses\Dealer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.Deck" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAQQAgAAACBAAAAACAAAAAAAQABAAAAAAAA=</HashCode>
+      <FileName>ObjectClasses\Deck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.Hand" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAIAQAAABAAAAAACAQIAABBAgAGCFAAEQAEAAACTA=</HashCode>
+      <FileName>ObjectClasses\Hand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.HumanPlayer" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABAAAIAAAAAEABEAAAGAAAAAAACAEACAAAAAAAAAAA=</HashCode>
+      <FileName>ObjectClasses\HumanPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.Table" Collapsed="true">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAQEIAgAEAAASESAAIIAAQQBAADgBVAgwIIghAAQQ=</HashCode>
+      <FileName>ObjectClasses\Table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.PlayerRules" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgCAAAAAgAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RulesClasses\PlayerRules.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.TableRules" Collapsed="true">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACACgIAAIAAAAIAAAAAIAAAAAABAAAAIAA=</HashCode>
+      <FileName>RulesClasses\TableRules.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.ListViewLogItem" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Types\ListViewLogItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.Convertions" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgEAAAAAAAAAAAAAAAAAAAAAAAIgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\Convertions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.EvaluatePlayerHand" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICAAAAAAAACAAAAAgAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Utility\EvaluatePlayerHand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.EvaluateWinningHand" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Utility\EvaluateWinningHand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.ListManager" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAA=</HashCode>
+      <FileName>Utility\ListManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.UserCommunication" Collapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\UserCommunication.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.WriteFileUtility" Collapsed="true">
+    <Position X="11.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\WriteFileUtility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.XMLSerializerUtility" Collapsed="true">
+    <Position X="13" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\XMLSerializerUtility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.Properties.Resources" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.Properties.Settings" Collapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackJack.Windows.HumanPlayerWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgBQAABAIAAAEBAAAAAAAgAAAIUAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Windows\HumanPlayerWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BlackJack.Windows.TableRulesWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgAGBAAAABAAAAAYCAAAAAAAAAAAAAAAAAgAAAAEACE=</HashCode>
+      <FileName>Windows\TableRulesWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BlackJack.Windows.TableWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCIAAABAAAAAAAAAEAAABAAAtgUAAAAjAAQAADABAAA=</HashCode>
+      <FileName>Windows\TableWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="BlackJack.IParticipant" Collapsed="true">
+    <Position X="7.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAQAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IParticipant.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="BlackJack.ActionType" Collapsed="true">
+    <Position X="7.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAACAAAQIAAAAAAAAAA=</HashCode>
+      <FileName>Types\ActionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

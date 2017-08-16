@@ -1,0 +1,1127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BlackJack</name>
+    </assembly>
+    <members>
+        <member name="T:BlackJack.BasicEvent">
+            <summary>
+            Class that is used by deck-events e.g. when deck is created or shuffled.
+            </summary>
+        </member>
+        <member name="M:BlackJack.BasicEvent.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:BlackJack.BasicEvent.TimeStamp">
+            <summary>
+            Time stamp
+            </summary>
+        </member>
+        <member name="T:BlackJack.Participant">
+            <summary>
+            Abstract class that represents a black jack participant, e.g.
+            dealer, human player or computer player.
+            </summary>
+        </member>
+        <member name="M:BlackJack.Participant.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name"></param>
+            <param name="tablePosition"></param>
+        </member>
+        <member name="P:BlackJack.Participant.Name">
+            <summary>
+            Name of participant.
+            </summary>
+        </member>
+        <member name="P:BlackJack.Participant.Active">
+            <summary>
+            If participant still playing this game
+            </summary>
+        </member>
+        <member name="P:BlackJack.Participant.TablePosition">
+            <summary>
+            Table position of participant.
+            </summary>
+        </member>
+        <member name="M:BlackJack.Participant.GetAction(BlackJack.Hand)">
+            <summary>
+            Method to provide the most basic implementation of
+            participant-action.
+            </summary>
+            <param name="activeHand"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BlackJack.DeckCreatedEvent">
+            <summary>
+            Class which contains defines the event when
+            a black jack deck is created. When en event is
+            fired, the class is sent with the event notifier.
+            </summary>
+        </member>
+        <member name="M:BlackJack.DeckCreatedEvent.#ctor(System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="nrOfDecks"></param>
+        </member>
+        <member name="P:BlackJack.DeckCreatedEvent.NumberOfDecks">
+            <summary>
+            How many decks in the black jack deck.
+            </summary>
+        </member>
+        <member name="T:BlackJack.DeckShuffledEvent">
+            <summary>
+            Event telling that deck has been shuffled
+            </summary>
+        </member>
+        <member name="M:BlackJack.DeckShuffledEvent.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:BlackJack.GameStartStopEvent">
+            <summary>
+            Event used when informing table, dealer and players that a game has started or stopped/is finished.
+            </summary>
+        </member>
+        <member name="M:BlackJack.GameStartStopEvent.#ctor(System.Collections.Generic.Dictionary{System.Int32,System.Collections.Generic.List{BlackJack.Hand}},System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="handRecord"></param>
+            <param name="gameId"></param>
+        </member>
+        <member name="P:BlackJack.GameStartStopEvent.GameId">
+            <summary>
+            Game id
+            </summary>
+        </member>
+        <member name="T:BlackJack.HumanPlayerActionEvent">
+            <summary>
+            Event used by the HumanPlayer to inform table what action the player wants to do,
+            e.g. Draw.
+            </summary>
+        </member>
+        <member name="M:BlackJack.HumanPlayerActionEvent.#ctor(BlackJack.ActionType,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="action"></param>
+            <param name="handId"></param>
+        </member>
+        <member name="P:BlackJack.HumanPlayerActionEvent.HumanPlayerAction">
+            <summary>
+            Action taken by the human player.
+            </summary>
+        </member>
+        <member name="P:BlackJack.HumanPlayerActionEvent.HandId">
+            <summary>
+            Hand id to identify the hand for which the action applies.
+            </summary>
+        </member>
+        <member name="T:BlackJack.ParticipantEvent">
+            <summary>
+            Class used when sending Participant events,
+            e.g. connect and disconnet of player.
+            </summary>
+        </member>
+        <member name="M:BlackJack.ParticipantEvent.#ctor(System.Int32,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="tablePosition"></param>
+            <param name="name"></param>
+        </member>
+        <member name="P:BlackJack.ParticipantEvent.TablePosition">
+            <summary>
+            Table position of the participant.
+            </summary>
+        </member>
+        <member name="P:BlackJack.ParticipantEvent.Name">
+            <summary>
+            Name of the participant.
+            </summary>
+        </member>
+        <member name="T:BlackJack.AllHandsEvent">
+            <summary>
+            Evant class used when sending all hands to all subscribers (i.e. players).
+            </summary>
+        </member>
+        <member name="M:BlackJack.AllHandsEvent.#ctor(System.Collections.Generic.Dictionary{System.Int32,System.Collections.Generic.List{BlackJack.Hand}})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="handRecord"></param>
+        </member>
+        <member name="P:BlackJack.AllHandsEvent.HandRecord">
+            <summary>
+            Record with all the hands.
+            </summary>
+        </member>
+        <member name="T:BlackJack.ComputerPlayerSetup">
+            <summary>
+            Class of type Form that helps the user setting up a ComputerPlayer
+            and the corresponding PlayerRules for that ComputerPlayer.
+            </summary>
+        </member>
+        <member name="M:BlackJack.ComputerPlayerSetup.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:BlackJack.ComputerPlayerSetup.Rules">
+            <summary>
+            Make this public so that the attribute can be read
+            from calling class.
+            </summary>
+        </member>
+        <member name="M:BlackJack.ComputerPlayerSetup.buttonOk_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method to verify and save the PlayerRule attributes inputted
+            by the user.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BlackJack.ComputerPlayerSetup.ValidateInput(System.String@)">
+            <summary>
+            Method to verify that the inputted Playerrule attributes
+            are within valid ranges.
+            </summary>
+            <param name="error"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlackJack.ComputerPlayerSetup.buttonExport_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method to export the PlayerRules when buttonExport is clicked.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BlackJack.ComputerPlayerSetup.buttonImport_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method to import PlayerRules and present them in the form.
+            The import is triggered by clicking buttonImport.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:BlackJack.ComputerPlayerSetup.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BlackJack.ComputerPlayerSetup.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BlackJack.ComputerPlayerSetup.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:BlackJack.DealerSetup">
+            <summary>
+            Form used to set up the dealer.
+            </summary>
+        </member>
+        <member name="P:BlackJack.DealerSetup.StandOn">
+            <summary>
+            Propoerty for StandOn
+            </summary>
+        </member>
+        <member name="P:BlackJack.DealerSetup.DrawOnSoft">
+            <summary>
+            Propoerty for DrawOnSoft
+            </summary>
+        </member>
+        <member name="M:BlackJack.DealerSetup.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:BlackJack.DealerSetup.buttonOk_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method which describes what happens when user clicks button buttonOk.
+            2017-05-28: Read the user input and save in to the class properties.
+                        Set DialogResult to OK and close this form.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:BlackJack.DealerSetup.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BlackJack.DealerSetup.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BlackJack.DealerSetup.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:BlackJack.PlayerSetup">
+            <summary>
+            Form used to configure whether the player shall
+            be a human player or a computer player.
+            </summary>
+        </member>
+        <member name="P:BlackJack.PlayerSetup.HumanPlayer">
+            <summary>
+            Property HumanPlayer
+            </summary>
+        </member>
+        <member name="P:BlackJack.PlayerSetup.PlayerName">
+            <summary>
+            Property PlayerName
+            </summary>
+        </member>
+        <member name="M:BlackJack.PlayerSetup.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:BlackJack.PlayerSetup.buttonHumanPlayer_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method to set the player as human when buttonHumanPlayer
+            is clicked.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BlackJack.PlayerSetup.setResult(System.Boolean)">
+            <summary>
+            Method to set attributes
+             - HumanPlayer. true or false depending on which button,
+               buttonHumanPlayer or buttonCompuerPlayer, was clicked.
+             - Name of player
+            </summary>
+            <param name="humanPlayer"></param>
+        </member>
+        <member name="F:BlackJack.PlayerSetup.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BlackJack.PlayerSetup.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BlackJack.PlayerSetup.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:BlackJack.IParticipant">
+            <summary>
+            Interface IParticipant represents a black jack participant.
+            </summary>
+        </member>
+        <member name="P:BlackJack.IParticipant.Name">
+            <summary>
+            Name of Participant
+            </summary>
+        </member>
+        <member name="P:BlackJack.IParticipant.Active">
+            <summary>
+            Whether of not the Participant is actively playing.
+            Can be set if for example the player joins or leaves in middle of a game.
+            </summary>
+        </member>
+        <member name="P:BlackJack.IParticipant.TablePosition">
+            <summary>
+            Position of the participant at the table
+            </summary>
+        </member>
+        <member name="T:BlackJack.ComputerPlayer">
+            <summary>
+            Class that represents a computer player.
+            </summary>
+        </member>
+        <member name="M:BlackJack.ComputerPlayer.#ctor(BlackJack.Table,BlackJack.PlayerRules,System.String,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="table"></param>
+            <param name="playerRules"></param>
+            <param name="name"></param>
+            <param name="tablePosition"></param>
+        </member>
+        <member name="E:BlackJack.ComputerPlayer.ParticipantDisconnected">
+            <summary>
+            Define event for when this participant leaves.
+            </summary>
+        </member>
+        <member name="M:BlackJack.ComputerPlayer.RaiseParticipantDisconnectedEvent">
+            <summary>
+            Raise the event of type ParticipantEvent
+            </summary>
+        </member>
+        <member name="M:BlackJack.ComputerPlayer.GetAction(BlackJack.Hand)">
+            <summary>
+            Method that given a hand, responds with an action.
+            Used by the Table.
+            </summary>
+            <param name="activeHand"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BlackJack.Dealer">
+            <summary>
+            Class Dealer which inherits the abstract class Participant.
+            </summary>
+        </member>
+        <member name="M:BlackJack.Dealer.#ctor(System.Int32,System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="standOn"></param>
+            <param name="hitOnSoft"></param>
+        </member>
+        <member name="M:BlackJack.Dealer.InitDealer(System.Int32,System.Boolean)">
+            <summary>
+            Initialise the dealer specific attributes
+            </summary>
+            <param name="standOn"></param>
+            <param name="drawOnSoft"></param>
+        </member>
+        <member name="M:BlackJack.Dealer.GetAction(BlackJack.Hand)">
+            <summary>
+            Method to calculate next action for dealer.
+            The next action is either Stop or Draw.
+            </summary>
+            <param name="activeHand"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BlackJack.Deck">
+            <summary>
+            Class which holds the functionality of a Black Jack deck
+            </summary>
+        </member>
+        <member name="M:BlackJack.Deck.#ctor(System.Int32)">
+            <summary>
+            Constructor which creates a black jack deck for
+            int nrOfDecks.
+            </summary>
+            <param name="nrOfDecks"></param>
+        </member>
+        <member name="P:BlackJack.Deck.NrOfDecks">
+            <summary>
+            Property for m_nrOfDecks
+            </summary>
+        </member>
+        <member name="M:BlackJack.Deck.VerifyAndSetNrOfDecks(System.Int32)">
+            <summary>
+            Method which sets the number of 'normal' decks
+            that shall be used in the black jack deck.
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:BlackJack.Deck.CreateShuffledBlackJackDeck">
+            <summary>
+            Method to create and shuffle a black jack deck
+            </summary>
+        </member>
+        <member name="M:BlackJack.Deck.CreateDeck">
+            <summary>
+            Method to create a non shuffled deck/list of cards
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BlackJack.Deck.Draw">
+            <summary>
+            Method to draw a card from the deck/list of cards.
+            The drawn card is removed.
+            </summary>
+            <returns>Drawn card (integer)</returns>
+        </member>
+        <member name="M:BlackJack.Deck.Reshuffle">
+            <summary>
+            Method to reshuffle the deck.
+            </summary>
+        </member>
+        <member name="M:BlackJack.Deck.GetSizeOfDeck">
+            <summary>
+            Method which returns the size of the deck, i.e.
+            how many cards are available in the deck.
+            </summary>
+            <returns>Size of deck (type: int)</returns>
+        </member>
+        <member name="T:BlackJack.Hand">
+            <summary>
+            Class that represents a black jack hand
+            </summary>
+        </member>
+        <member name="M:BlackJack.Hand.#ctor(System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="handId"></param>
+        </member>
+        <member name="P:BlackJack.Hand.NrOfCards">
+            <summary>
+            Number of cards in hand
+            </summary>
+        </member>
+        <member name="P:BlackJack.Hand.HandId">
+            <summary>
+            Hand id
+            </summary>
+        </member>
+        <member name="P:BlackJack.Hand.NumberOfSplits">
+            <summary>
+            Number of splits done by hand
+            </summary>
+        </member>
+        <member name="P:BlackJack.Hand.SplitAces">
+            <summary>
+            If hand contains split aces.
+            </summary>
+        </member>
+        <member name="P:BlackJack.Hand.IsDoubled">
+            <summary>
+            If hand is doubled.
+            </summary>
+        </member>
+        <member name="P:BlackJack.Hand.BlackJack">
+            <summary>
+            If hand has black jack.
+            </summary>
+        </member>
+        <member name="P:BlackJack.Hand.InPlay">
+            <summary>
+            If hand is still in play
+            </summary>
+        </member>
+        <member name="P:BlackJack.Hand.WinningHand">
+            <summary>
+            If this is a winning hand (evaluated at end of game)
+            </summary>
+        </member>
+        <member name="P:BlackJack.Hand.DealerHand">
+            <summary>
+            If this is the hand of the dealer
+            </summary>
+        </member>
+        <member name="M:BlackJack.Hand.GetHandValue">
+            <summary>
+            Method to calculate and get the handvalue.
+            Ace is represented with one ini this deck.
+            Value greater than 21 is not included, unless it is
+            the only available value (the 'basic' value).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BlackJack.Hand.AddCardToHand(System.Int32)">
+            <summary>
+            Method to add card to hand.
+            </summary>
+            <param name="card"></param>
+        </member>
+        <member name="M:BlackJack.Hand.HandToString">
+            <summary>
+            Method to return the hand (the cards) as a string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BlackJack.Hand.HandValueToString">
+            <summary>
+            Method to return the hand value as a string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BlackJack.Hand.LogString">
+            <summary>
+            Method to output the hand in string format. Used by the
+            log and the text exporting functionality
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BlackJack.HumanPlayer">
+            <summary>
+            Class to hold the 'logic' of the human player. Since this is the human player
+            this class basically only routes the user actions (from HumanPlayerWindow)
+            to the table.
+            </summary>
+        </member>
+        <member name="M:BlackJack.HumanPlayer.#ctor(BlackJack.Table,System.String,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="table"></param>
+            <param name="name"></param>
+            <param name="tablePosition"></param>
+        </member>
+        <member name="E:BlackJack.HumanPlayer.ParticipantDisconnected">
+            <summary>
+            Define event for when this participant leaves.
+            </summary>
+        </member>
+        <member name="E:BlackJack.HumanPlayer.HumanAction">
+            <summary>
+            Define event HumanPlayerActionEvent
+            </summary>
+        </member>
+        <member name="M:BlackJack.HumanPlayer.TriggerAction(BlackJack.Hand)">
+            <summary>
+            Method to decide the human player action.
+            </summary>
+        </member>
+        <member name="T:BlackJack.PlayerRules">
+            <summary>
+            Class that holds the rules for a black jack player.
+            </summary>
+        </member>
+        <member name="P:BlackJack.PlayerRules.StandOn">
+            <summary>
+            Property for standon - when to stop draw cards.
+            </summary>
+        </member>
+        <member name="P:BlackJack.PlayerRules.NrOFGames">
+            <summary>
+            Property for number of games. 
+            </summary>
+        </member>
+        <member name="T:BlackJack.ListViewLogItem">
+            <summary>
+            Class to hold the data to be presented in a listview.
+            </summary>
+        </member>
+        <member name="T:BlackJack.Table">
+            <summary>
+            Class Table is the main hub for this black jack application.
+            
+            Connects decks and participants.
+            Receives and forwards events from deck and participants.
+            Dictates the gameplay.
+            </summary>
+        </member>
+        <member name="M:BlackJack.Table.#ctor(BlackJack.TableRules)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="E:BlackJack.Table.DeckCreated">
+            <summary>
+            Define event for deck creation.
+            </summary>
+        </member>
+        <member name="E:BlackJack.Table.DeckShuffled">
+            <summary>
+            Define event for shuffeling the deck.
+            </summary>
+        </member>
+        <member name="E:BlackJack.Table.ParticipantConnected">
+            <summary>
+            Define event for when a participant connects.
+            </summary>
+        </member>
+        <member name="E:BlackJack.Table.ParticipantDisconnected">
+            <summary>
+            Define event for when a participant disconnects.
+            </summary>
+        </member>
+        <member name="E:BlackJack.Table.UpdateHands">
+            <summary>
+            Define event for when cards on the table should be updated in GUI
+            </summary>
+        </member>
+        <member name="E:BlackJack.Table.GameComplete">
+            <summary>
+            Define event for when game has completed
+            </summary>
+        </member>
+        <member name="E:BlackJack.Table.GameStarting">
+            <summary>
+            Define event for when game starts.
+            </summary>
+        </member>
+        <member name="M:BlackJack.Table.ConnectDeck(System.Int32)">
+            <summary>
+            Create a black jack deck and send event that it has been created.
+            </summary>
+            <param name="nrOfDecks"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlackJack.Table.ShuffleDeck">
+            <summary>
+            Reshuffle the black jack deck and send event that it has been reshuffled.
+            </summary>
+        </member>
+        <member name="M:BlackJack.Table.ConnectDealer(System.Int32,System.Boolean)">
+            <summary>
+            Connect a dealer to the table.
+            </summary>
+            <param name="standOn"></param>
+            <param name="drawOnSoft"></param>
+        </member>
+        <member name="M:BlackJack.Table.ConnectHumanPlayer(System.String,System.Int32)">
+            <summary>
+            Connect a player to the table.
+            </summary>
+            <param name="name"></param>
+            <param name="tablePosition"></param>
+        </member>
+        <member name="M:BlackJack.Table.ConnectComputerPlayer(System.String,System.Int32,BlackJack.PlayerRules)">
+            <summary>
+            Method to connect a computer player to the table.
+            </summary>
+            <param name="name"></param>
+            <param name="tablePosition"></param>
+            <param name="playerRules"></param>
+        </member>
+        <member name="M:BlackJack.Table.ContinueGame">
+            <summary>
+            Method which takes the first active hand and triggers/asks for
+            an action on that hand.
+            
+            If there are no more active hands or players;
+             - calculate the winning/result
+             - remove inactive players
+             - clear the m_handRecord dictionary
+            </summary>
+        </member>
+        <member name="M:BlackJack.Table.HandlePlayerAction(BlackJack.ActionType,System.Int32)">
+            <summary>
+            Method to handle a player action on a specific handId.
+            After action and handId have been verified OK, action is performed and
+            event is sent to inform about the new hands.
+            </summary>
+            <param name="action"></param>
+            <param name="handId"></param>
+        </member>
+        <member name="T:BlackJack.TableRules">
+            <summary>
+            Class that holds the table-rules for the BlackJack game.
+            </summary>
+        </member>
+        <member name="P:BlackJack.TableRules.NumberOfResplits">
+            <summary>
+            Number of resplits
+              Default: No limit (-1)
+            </summary>
+        </member>
+        <member name="P:BlackJack.TableRules.NumberOfSplitsOnAces">
+            <summary>
+            Number of splits on aces
+              Default: 1
+            </summary>
+        </member>
+        <member name="P:BlackJack.TableRules.NumberOfCardsAfterSplitAces">
+            <summary>
+            How many cards are allowed after player split aces.
+              Default: 1
+            </summary>
+        </member>
+        <member name="P:BlackJack.TableRules.AllowDoubleOnSplitAces">
+            <summary>
+            Allow double after aces have been spli
+              Defaul: false
+            </summary>
+        </member>
+        <member name="P:BlackJack.TableRules.AllowDoubleAfterSplit">
+            <summary>
+            Allow double after 'normal' split
+              Default: true
+            </summary>
+        </member>
+        <member name="P:BlackJack.TableRules.AllowDoubleOnSoftHands">
+            <summary>
+            Allow double on soft hands.
+              Default: false
+            </summary>
+        </member>
+        <member name="P:BlackJack.TableRules.DoubleMin">
+            <summary>
+            Minimum hand value allowed to double on
+              Default: 9
+            </summary>
+        </member>
+        <member name="P:BlackJack.TableRules.DoubleMax">
+            <summary>
+            Maximum hand value allowed to double on
+              Default: 11
+            </summary>
+        </member>
+        <member name="P:BlackJack.TableRules.DealerWinsAtTie">
+            <summary>
+            Dealer wins at tie
+              Default: false
+            </summary>
+        </member>
+        <member name="T:BlackJack.ActionType">
+            <summary>
+            enum to describe the different actions a black jack 
+            participant can take.
+            </summary>
+        </member>
+        <member name="F:BlackJack.ActionType.Double">
+            <summary>
+            To double the stake on a hand
+            </summary>
+        </member>
+        <member name="F:BlackJack.ActionType.Draw">
+            <summary>
+            To draw a card from the deck
+            </summary>
+        </member>
+        <member name="F:BlackJack.ActionType.Split">
+            <summary>
+            To split the hand in two.
+            </summary>
+        </member>
+        <member name="F:BlackJack.ActionType.Stop">
+            <summary>
+            Stop (no more cards will be dealt to the hand)
+            </summary>
+        </member>
+        <member name="T:BlackJack.Convertions">
+            <summary>
+            Utility class to help in type convertions, string replacements
+            etc.
+            </summary>
+        </member>
+        <member name="M:BlackJack.Convertions.ConvertStringToInteger(System.String,System.Int32@)">
+            <summary>
+            Method to convert string to integer.
+            </summary>
+            <param name="input"></param>
+            <param name="output"></param>
+        </member>
+        <member name="M:BlackJack.Convertions.ConvertOneToAce(System.String)">
+            <summary>
+            Method to convert the string "1" to "A".
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlackJack.Convertions.ValidateString(System.String)">
+            <summary>
+            A method which controls that a given string is neither null nor empty 
+            and should at least have one character other than a blank space (or escape sequences).
+            </summary>
+            <param name="stringToValidate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlackJack.Convertions.ReplaceSpaceWithUnderScore(System.String)">
+            <summary>
+            Method to replace space (" ") with underscore ("_") in a string.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BlackJack.EvaluatePlayerHand">
+            <summary>
+            Utility class to evaluate a blackjack hand.
+            </summary>
+        </member>
+        <member name="M:BlackJack.EvaluatePlayerHand.CheckIfBJ(BlackJack.Hand)">
+            <summary>
+            Method to check if hand is BlackJack (A/10).
+            </summary>
+            <param name="hand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlackJack.EvaluatePlayerHand.CheckIfBust(BlackJack.Hand)">
+            <summary>
+            Method to check if hand is bust (i.e. > 21).
+            </summary>
+            <param name="hand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlackJack.EvaluatePlayerHand.IsSplitAllowed(BlackJack.TableRules,BlackJack.Hand)">
+            <summary>
+            Method to check if split is allowed on hand.
+            </summary>
+            <param name="rules"></param>
+            <param name="hand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlackJack.EvaluatePlayerHand.IsDoubleAllowed(BlackJack.TableRules,BlackJack.Hand)">
+            <summary>
+            Meyhod to investigate if double is allowed on hand.
+            </summary>
+            <param name="rules"></param>
+            <param name="hand"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BlackJack.EvaluatePlayerHand.ProcessHandDelegate">
+            <summary>
+            Declare delegate type for processing a hand
+            </summary>
+            <param name="hand"></param>
+        </member>
+        <member name="M:BlackJack.EvaluatePlayerHand.ProcessHand(BlackJack.Hand)">
+            <summary>
+            Method to evaluate hand and set BlackJack and/or unset InPlay flag
+            if hand has BJ or is to big.
+            </summary>
+            <param name="hand"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BlackJack.EvaluateWinningHand">
+            <summary>
+            Class used to evaluate player hand against
+            a dealer hand.
+            </summary>
+        </member>
+        <member name="M:BlackJack.EvaluateWinningHand.#ctor(BlackJack.Hand)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="dealerHand"></param>
+        </member>
+        <member name="M:BlackJack.EvaluateWinningHand.IsHandBetterThanDealerHand(BlackJack.Hand)">
+            <summary>
+            Method which returns true if player hand is better than
+            dealer hand.
+            </summary>
+            <param name="playerHand"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BlackJack.ListManager.Utils">
+            <summary>
+            Method to return random number.
+            
+            This single static random generator is there because if we are going to create 
+            more than one random number, we need to keep the Random instance and reuse it.
+            If we create new instances too close in time, 
+            they will produce the same series of random numbers as the random generator 
+            is seeded from the system clock.
+            </summary>
+        </member>
+        <member name="M:BlackJack.ListManager.Shuffle``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Method to shuffle a list.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="inputList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlackJack.ListManager.CheckListElementAvailable``1(System.Collections.Generic.List{``0},System.Int32)">
+            <summary>
+            Method which tries to access element index in list-string-.
+            If element is present at index, then that element (type: string) is returned.
+            If element is not present at index, then N/A string is returned.
+            </summary>
+            <param name="list"></param>
+            <param name="index"></param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:BlackJack.UserCommunication.DisplaySuccesfulMsgBox(System.String)">
+            <summary>
+            Method which configures and displays a messagebox to indicate succesful registration
+            </summary>
+            <param name="messageBoxText"></param>
+        </member>
+        <member name="M:BlackJack.UserCommunication.DisplayErrorMsgBox(System.String)">
+            <summary>
+            Method which configures and displays a messagebox to indicate an error
+            </summary>
+            <param name="messageBoxText"></param>
+        </member>
+        <member name="M:BlackJack.WriteFileUtility.GetDirToSaveFileTo(System.String,System.String@)">
+            <summary>
+            Method get a file (name and directory) to which an
+            operation can be made and saved.
+            
+            Below documantation was useful when writing bélow method.
+            http://stackoverflow.com/questions/5136254/saving-file-using-savefiledialog-in-c-sharp
+            </summary>
+            <param name="defaultFileName"></param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:BlackJack.WriteFileUtility.WriteGameLogToTextFile(System.Collections.Generic.List{System.String},System.String,System.Boolean)">
+            <summary>
+            Method to write invoice details (type: string[]) to a tile.
+            </summary>
+            <param name="stringArray"></param>
+            <param name="defaultFileName"></param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:BlackJack.XMLSerializerUtility.Serialize``1(``0,System.String)">
+            <summary>
+            Method to write the given object to an XML file
+             - Only writes and reads the Public properties and variables to / from the file.
+             - Classes to be serialized must contain a public parameterless constructor.
+             - The data saved to the file is human readable, so it can easily be edited outside of your application.
+             - Use the [XmlIgnore] attribute to exclude a public property or variable from being written to the file.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlackJack.XMLSerializerUtility.DeSerialize``1(System.String)">
+            <summary>
+            Method to read an object instance of a XML file.
+             - Only writes and reads the Public properties and variables to / from the file.
+             - Classes to be serialized must contain a public parameterless constructor.
+             - The data saved to the file is human readable, so it can easily be edited outside of your application.
+             - Use the [XmlIgnore] attribute to exclude a public property or variable from being written to the file.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BlackJack.Windows.HumanPlayerWindow">
+            <summary>
+            Interaction logic for HumanPlayerWindow.xaml
+            </summary>
+            <summary>
+            HumanPlayerWindow
+            </summary>
+        </member>
+        <member name="M:BlackJack.Windows.HumanPlayerWindow.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="E:BlackJack.Windows.HumanPlayerWindow.WindowClose">
+            <summary>
+            Define event WindowCloseEvent
+            </summary>
+        </member>
+        <member name="E:BlackJack.Windows.HumanPlayerWindow.HumanAction">
+            <summary>
+            Define event HumanPlayerActionEvent
+            </summary>
+        </member>
+        <member name="E:BlackJack.Windows.HumanPlayerWindow.ExportGameLog">
+            <summary>
+            Define event ExportGameLog
+            </summary>
+        </member>
+        <member name="M:BlackJack.Windows.HumanPlayerWindow.TriggerAction(BlackJack.Hand)">
+            <summary>
+            Method used by the table to trigger an action
+            at the human player. The action is e.g. Draw.
+            This trigger enables the GUI and updates the 
+            hand information.
+            </summary>
+            <param name="hand"></param>
+        </member>
+        <member name="M:BlackJack.Windows.HumanPlayerWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:BlackJack.Windows.TableRulesWindow">
+            <summary>
+            Interaction logic for TableRulesWindow.xaml
+            </summary>
+            <summary>
+            TableRulesWindow
+            </summary>
+        </member>
+        <member name="M:BlackJack.Windows.TableRulesWindow.#ctor(BlackJack.TableRules)">
+            <summary>
+            Class that helps user see, configure, export and import the table rules.
+            </summary>
+            <param name="rules"></param>
+        </member>
+        <member name="P:BlackJack.Windows.TableRulesWindow.Rules">
+            <summary>
+            Table rules
+            </summary>
+        </member>
+        <member name="M:BlackJack.Windows.TableRulesWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:BlackJack.Windows.TableWindow">
+            <summary>
+            Interaction logic for TableWindow.xaml
+            </summary>
+            <summary>
+            TableWindow
+            </summary>
+        </member>
+        <member name="M:BlackJack.Windows.TableWindow.#ctor(BlackJack.TableRules)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:BlackJack.Windows.TableWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:BlackJack.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:BlackJack.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:BlackJack.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:BlackJack.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:BlackJack.MainWindow.#ctor">
+            <summary>
+            Mainwindow of application. Represents the lobby
+            </summary>
+        </member>
+        <member name="M:BlackJack.MainWindow.button_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to create a instance of Table when button is clicked.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BlackJack.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:BlackJack.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:BlackJack.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:BlackJack.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

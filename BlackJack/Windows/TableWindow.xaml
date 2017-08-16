@@ -1,0 +1,58 @@
+﻿<Window x:Name="TableWindow1" x:Class="BlackJack.Windows.TableWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BlackJack"
+        mc:Ignorable="d"
+        Title="Table" Height="600" Width="1200" Background="#FFA8B79E">
+    <Grid>
+        <Button x:Name="buttonConnectDeck" Content="Connect Deck" HorizontalAlignment="Left" Margin="1043,31,0,0" VerticalAlignment="Top" Width="118" Background="#FFECA71E" Click="buttonConnectDeck_Click" Height="45" HorizontalContentAlignment="Left"/>
+        <TextBox x:Name="textBoxNrOfDecks" HorizontalAlignment="Left" Height="45" Margin="1129,31,0,0" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Width="32" Opacity="0.5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <ListView x:Name="listViewLog" HorizontalAlignment="Left" Height="220" Margin="558,329,0,0" VerticalAlignment="Top" Width="600">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="TimeStamp" Width="150" DisplayMemberBinding="{Binding TimeStamp}"/>
+                    <GridViewColumn Header="Information" Width="300" DisplayMemberBinding="{Binding Information}"/>
+                    <GridViewColumn Header="Sender" Width="150" DisplayMemberBinding="{Binding Sender}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="buttonDealer" Content="Add Dealer" HorizontalAlignment="Left" Margin="716,39,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="-2.664,0.442" Height="45" Background="#FFECA71E" Click="buttonDealer_Click"/>
+        <Button x:Name="buttonPlayer1" Content="Connect Player" HorizontalAlignment="Left" Margin="918,70,0,0" VerticalAlignment="Top" Width="100" Height="40" Click="buttonPlayer1_Click"/>
+        <TextBlock x:Name="textBlockPlayer1Desc" HorizontalAlignment="Left" Margin="918,45,0,0" TextWrapping="Wrap" Text="Hand:" VerticalAlignment="Top" Width="35" Height="20" RenderTransformOrigin="2.156,0.233"/>
+        <Border BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Left" Height="25" Margin="953,40,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.211,-0.009">
+            <TextBlock x:Name="textBlockPlayer1Hand" TextWrapping="Wrap" Text="-" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        </Border>
+        <TextBlock x:Name="textBlockDealerDesc" HorizontalAlignment="Left" Margin="716,98,0,0" TextWrapping="Wrap" Text="Hand:" VerticalAlignment="Top" Width="35" Height="20" RenderTransformOrigin="2.156,0.233"/>
+        <Border x:Name="___No_Name_" BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Left" Height="25" Margin="747,93,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.211,-0.009">
+            <TextBlock x:Name="textBlockDealerHand" TextWrapping="Wrap" Text="-" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        </Border>
+        <Button x:Name="buttonPlayer2" Content="Connect Player" HorizontalAlignment="Left" Margin="861,160,0,0" VerticalAlignment="Top" Width="100" Height="40" Click="buttonPlayer2_Click"/>
+        <TextBlock x:Name="textBlockPlayer2Desc" HorizontalAlignment="Left" Margin="861,135,0,0" TextWrapping="Wrap" Text="Hand:" VerticalAlignment="Top" Width="35" Height="20" RenderTransformOrigin="2.156,0.233"/>
+        <Border BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Left" Height="25" Margin="896,130,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.211,-0.009">
+            <TextBlock x:Name="textBlockPlayer2Hand" TextWrapping="Wrap" Text="-" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        </Border>
+        <Button x:Name="buttonPlayer3" Content="Connect Player" HorizontalAlignment="Left" Margin="781,244,0,0" VerticalAlignment="Top" Width="100" Height="40" Click="buttonPlayer3_Click"/>
+        <TextBlock x:Name="textBlockPlayer3Desc" HorizontalAlignment="Left" Margin="781,219,0,0" TextWrapping="Wrap" Text="Hand:" VerticalAlignment="Top" Width="35" Height="20" RenderTransformOrigin="2.156,0.233"/>
+        <Border BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Left" Height="25" Margin="812,220,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.211,-0.009">
+            <TextBlock x:Name="textBlockPlayer3Hand" TextWrapping="Wrap" Text="-" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,-1,-3.667,10.333"/>
+        </Border>
+        <Button x:Name="buttonPlayer4" Content="Connect Player" HorizontalAlignment="Left" Margin="620,244,0,0" VerticalAlignment="Top" Width="100" Height="40" Click="buttonPlayer4_Click"/>
+        <TextBlock x:Name="textBlockPlayer4Desc" HorizontalAlignment="Left" Margin="620,219,0,0" TextWrapping="Wrap" Text="Hand:" VerticalAlignment="Top" Width="35" Height="20" RenderTransformOrigin="2.156,0.233"/>
+        <Border BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Left" Height="25" Margin="655,214,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.211,-0.009">
+            <TextBlock x:Name="textBlockPlayer4Hand" TextWrapping="Wrap" Text="-" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        </Border>
+        <Button x:Name="buttonPlayer5" Content="Connect Player" HorizontalAlignment="Left" Margin="532,150,0,0" VerticalAlignment="Top" Width="100" Height="40" Click="buttonPlayer5_Click"/>
+        <TextBlock x:Name="textBlockPlayer5Desc" HorizontalAlignment="Left" Margin="532,125,0,0" TextWrapping="Wrap" Text="Hand:" VerticalAlignment="Top" Width="35" Height="20" RenderTransformOrigin="2.156,0.233"/>
+        <Border BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Left" Height="25" Margin="567,120,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.211,-0.009">
+            <TextBlock x:Name="textBlockPlayer5Hand" TextWrapping="Wrap" Text="-" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        </Border>
+        <Button x:Name="buttonPlayer6" Content="Connect Player" HorizontalAlignment="Left" Margin="484,60,0,0" VerticalAlignment="Top" Width="100" Height="40" Click="buttonPlayer6_Click"/>
+        <TextBlock x:Name="textBlockPlayer6Desc" HorizontalAlignment="Left" Margin="484,35,0,0" TextWrapping="Wrap" Text="Hand:" VerticalAlignment="Top" Width="35" Height="20" RenderTransformOrigin="2.156,0.233"/>
+        <Border BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Left" Height="25" Margin="519,30,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.211,-0.009">
+            <TextBlock x:Name="textBlockPlayer6Hand" TextWrapping="Wrap" Text="-" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        </Border>
+        <ListBox x:Name="listBoxMainLog" HorizontalAlignment="Left" Height="311" Margin="30,214,0,0" VerticalAlignment="Top" Width="407"/>
+    </Grid>
+</Window>

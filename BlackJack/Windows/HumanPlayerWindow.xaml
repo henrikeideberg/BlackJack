@@ -1,0 +1,23 @@
+﻿<Window x:Class="BlackJack.Windows.HumanPlayerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BlackJack"
+        mc:Ignorable="d"
+        Closing="WindowClosing"
+        Title="HumanPlayerWindow" Height="300" Width="300">
+    <Grid>
+        <Button x:Name="buttonDraw" Content="Draw" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="75" Click="buttonDraw_Click"/>
+        <Button x:Name="buttonStop" Content="Stop" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Width="75" Click="buttonStop_Click"/>
+        <Button x:Name="buttonSplit" Content="Split" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
+        <TextBlock x:Name="textBlockHandId" HorizontalAlignment="Left" Margin="108,50,0,0" TextWrapping="Wrap" Text="HandId:" VerticalAlignment="Top" Height="20"/>
+        <TextBlock x:Name="textBlockHandId_Value" HorizontalAlignment="Left" Margin="179,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="99"/>
+        <TextBlock x:Name="textBlockHand" HorizontalAlignment="Left" Margin="108,80,0,0" TextWrapping="Wrap" Text="Hand" VerticalAlignment="Top" Height="20"/>
+        <TextBlock x:Name="textBlockHand_Value" HorizontalAlignment="Left" Margin="174,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="99"/>
+        <TextBlock x:Name="textBlockHandValue" HorizontalAlignment="Left" Margin="108,110,0,0" TextWrapping="Wrap" Text="HandValue" VerticalAlignment="Top" Height="20"/>
+        <TextBlock x:Name="textBlockHandValue_Value" HorizontalAlignment="Left" Margin="179,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="94"/>
+        <Button x:Name="buttonExportGameLog" Content="Export Game Log" HorizontalAlignment="Left" Margin="10,223,0,0" VerticalAlignment="Top" Width="116" Height="24" Click="buttonExportGameLog_Click"/>
+
+    </Grid>
+</Window>

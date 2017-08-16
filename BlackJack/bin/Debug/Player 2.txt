@@ -1,0 +1,214 @@
+HandId; Hand; Handvalue; NumberOfSplits; SplitAces; IsDoubled; BlackJack; WinningHand; DealerHand
+4; 10/10; 20; 0; False; False; False; True; False
+5; 8/4/A/6; 19; 0; False; False; False; False; True
+Game ended: 3
+Game starting: 4
+6; 8/4/4/10; 26; 0; False; False; False; False; False
+7; 10/10; 20; 0; False; False; False; True; False
+8; 4/10/A/9; 24; 0; False; False; False; False; True
+Game ended: 4
+Game starting: 5
+9; 10/8/7; 25; 0; False; False; False; False; False
+10; 7/4/5/9; 25; 0; False; False; False; False; False
+11; 10/4/10; 24; 0; False; False; False; False; True
+Game ended: 5
+Game starting: 6
+12; A/10; 11/21; 0; False; False; True; True; False
+13; 7/4/8; 19; 0; False; False; False; False; False
+14; 10/3/7; 20; 0; False; False; False; False; True
+Game ended: 6
+Game starting: 7
+15; 10/10; 20; 0; False; False; False; True; False
+16; 2/8/10; 20; 0; False; False; False; True; False
+17; 5/4/9; 18; 0; False; False; False; False; True
+Game ended: 7
+Game starting: 8
+18; 10/6; 16; 0; False; False; False; False; False
+19; 9/A; 10/20; 0; False; False; False; True; False
+20; A/6; 7/17; 0; False; False; False; False; True
+Game ended: 8
+Game starting: 9
+21; 10/7; 17; 0; False; False; False; False; False
+22; A/6; 7/17; 0; False; False; False; False; False
+23; 7/6/7; 20; 0; False; False; False; False; True
+Game ended: 9
+Game starting: 10
+24; 9/5/6; 20; 0; False; False; False; True; False
+25; A/6; 7/17; 0; False; False; False; True; False
+26; 4/A/9/8; 22; 0; False; False; False; False; True
+Game ended: 10
+Game starting: 11
+27; A/10; 11/21; 0; False; False; True; True; False
+28; 10/5/3; 18; 0; False; False; False; True; False
+29; 4/5/2/4/7; 22; 0; False; False; False; False; True
+Game ended: 11
+Game starting: 12
+30; 10/5; 15; 0; False; False; False; False; False
+31; 7/2/2/A/8; 20; 0; False; False; False; True; False
+32; 10/5/2; 17; 0; False; False; False; False; True
+Game ended: 12
+Game starting: 13
+33; 5/7/6/10; 28; 0; False; False; False; False; False
+34; 6/10/8; 24; 0; False; False; False; False; False
+35; A/3/8/4/6; 22; 0; False; False; False; False; True
+Game ended: 13
+Game starting: 14
+36; 2/9/A; 12; 0; False; False; False; False; False
+37; 4/2/9/2; 17; 0; False; False; False; False; False
+38; 10/10; 20; 0; False; False; False; False; True
+Game ended: 14
+Game starting: 15
+39; 5/A; 6/16; 0; False; False; False; True; False
+40; 4/A/10/3; 18; 0; False; False; False; True; False
+41; 3/10/10; 23; 0; False; False; False; False; True
+Game ended: 15
+Game starting: 16
+42; 10/9; 19; 0; False; False; False; False; False
+43; 10/A; 11/21; 0; False; False; True; True; False
+44; 10/10; 20; 0; False; False; False; False; True
+Game ended: 16
+Game starting: 17
+45; A/4; 5/15; 0; False; False; False; False; False
+46; 10/2/6; 18; 0; False; False; False; False; False
+47; 9/7/4; 20; 0; False; False; False; False; True
+Game ended: 17
+Game starting: 18
+48; 2/6/8/9; 25; 0; False; False; False; False; False
+49; 10/3/8; 21; 0; False; False; False; False; True
+Game ended: 18
+Game starting: 19
+50; 3/3/3/6/9; 24; 0; False; False; False; False; False
+51; 7/8/10; 25; 0; False; False; False; False; True
+Game ended: 19
+Game starting: 20
+52; 6/3/8; 17; 0; False; False; False; False; False
+53; 4/10/7; 21; 0; False; False; False; False; True
+Game ended: 20
+Game starting: 21
+54; 6/10/5; 21; 0; False; False; False; False; False
+55; 10/A; 11/21; 0; False; False; True; False; True
+Game ended: 21
+Game starting: 22
+56; 10/10; 20; 0; False; False; False; False; False
+57; 10/4/A/5; 20; 0; False; False; False; False; True
+Game ended: 22
+Game starting: 23
+58; 9/3/2/9; 23; 0; False; False; False; False; False
+59; 9/10; 19; 0; False; False; False; False; True
+Game ended: 23
+Game starting: 24
+60; 5/2/9/10; 26; 0; False; False; False; False; False
+61; 10/6/4; 20; 0; False; False; False; False; True
+Game ended: 24
+Game starting: 25
+62; 4/10/10; 24; 0; False; False; False; False; False
+63; 3/4/10; 17; 0; False; False; False; False; True
+Game ended: 25
+Game starting: 26
+64; 3/5/8/3; 19; 0; False; False; False; False; False
+65; 10/10; 20; 0; False; False; False; False; True
+Game ended: 26
+Game starting: 27
+66; 2/10/10; 22; 0; False; False; False; False; False
+67; 10/7; 17; 0; False; False; False; False; True
+Game ended: 27
+Game starting: 28
+68; 6/10/10; 26; 0; False; False; False; False; False
+69; 10/A; 11/21; 0; False; False; True; False; True
+Game ended: 28
+Game starting: 29
+70; 6/10/A; 17; 0; False; False; False; False; False
+71; 6/5/6; 17; 0; False; False; False; False; True
+Game ended: 29
+Game starting: 30
+72; 10/A; 11/21; 0; False; False; True; True; False
+73; 9/2/2/10; 23; 0; False; False; False; False; True
+Game ended: 30
+Game starting: 31
+74; 10/5/7; 22; 0; False; False; False; False; False
+75; A/9; 10/20; 0; False; False; False; False; True
+Game ended: 31
+Game starting: 32
+76; 10/4/3; 17; 0; False; False; False; False; False
+77; 9/10; 19; 0; False; False; False; False; True
+Game ended: 32
+Game starting: 33
+78; 6/10/9; 25; 0; False; False; False; False; False
+79; 4/2/10/3; 19; 0; False; False; False; False; True
+Game ended: 33
+Game starting: 34
+80; 10/6/5; 21; 0; False; False; False; True; False
+81; 10/5/4; 19; 0; False; False; False; False; True
+Game ended: 34
+Game starting: 35
+82; 6/10/10; 26; 0; False; False; False; False; False
+83; 7/10; 17; 0; False; False; False; False; True
+Game ended: 35
+Game starting: 36
+84; 5/4/10; 19; 0; False; False; False; False; False
+85; 2/A/6; 9/19; 0; False; False; False; False; True
+Game ended: 36
+Game starting: 37
+86; 10/7; 17; 0; False; False; False; False; False
+87; 10/8; 18; 0; False; False; False; False; True
+Game ended: 37
+Game starting: 38
+88; 10/7; 17; 0; False; False; False; False; False
+89; 9/10; 19; 0; False; False; False; False; True
+Game ended: 38
+Game starting: 39
+90; 10/7; 17; 0; False; False; False; True; False
+91; 3/9/A/10; 23; 0; False; False; False; False; True
+Game ended: 39
+Game starting: 40
+92; 8/10; 18; 0; False; False; False; True; False
+93; 10/5/10; 25; 0; False; False; False; False; True
+Game ended: 40
+Game starting: 41
+94; 8/9; 17; 0; False; False; False; False; False
+95; 5/3/9; 17; 0; False; False; False; False; True
+Game ended: 41
+Game starting: 42
+96; 4/5/10; 19; 0; False; False; False; False; False
+97; 9/10; 19; 0; False; False; False; False; True
+Game ended: 42
+Game starting: 43
+98; 6/10/5; 21; 0; False; False; False; True; False
+99; 6/10/10; 26; 0; False; False; False; False; True
+Game ended: 43
+Game starting: 44
+100; 4/5/4/2/10; 25; 0; False; False; False; False; False
+101; 6/3/8; 17; 0; False; False; False; False; True
+Game ended: 44
+Game starting: 45
+102; 9/4/7; 20; 0; False; False; False; True; False
+103; 2/10/3/10; 25; 0; False; False; False; False; True
+Game ended: 45
+Game starting: 46
+104; 2/5/7/7; 21; 0; False; False; False; False; False
+105; A/10; 11/21; 0; False; False; True; False; True
+Game ended: 46
+Game starting: 47
+106; 5/8/10; 23; 0; False; False; False; False; False
+107; 10/10; 20; 0; False; False; False; False; True
+Game ended: 47
+Game starting: 48
+108; 7/4/10; 21; 0; False; False; False; True; False
+109; 6/10/8; 24; 0; False; False; False; False; True
+Game ended: 48
+Game starting: 49
+110; 7/10; 17; 0; False; False; False; True; False
+111; 10/6/9; 25; 0; False; False; False; False; True
+Game ended: 49
+Game starting: 50
+112; 2/9/6; 17; 0; False; False; False; False; False
+113; 10/3/8; 21; 0; False; False; False; False; True
+Game ended: 50
+Game starting: 51
+114; 10/10; 20; 0; False; False; False; False; False
+115; 10/10; 20; 0; False; False; False; False; True
+Game ended: 51
+Game starting: 52
+116; 9/3/10; 22; 0; False; False; False; False; False
+117; 2/A/10/2/9; 24; 0; False; False; False; False; True
+Game ended: 52

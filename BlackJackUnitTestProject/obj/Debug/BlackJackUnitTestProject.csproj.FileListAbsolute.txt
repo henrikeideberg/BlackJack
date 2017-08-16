@@ -1,0 +1,9 @@
+C:\Users\eido\Documents\Visual Studio 2015\Projects\BlackJack\BlackJackUnitTestProject\bin\Debug\BlackJackUnitTestProject.dll
+C:\Users\eido\Documents\Visual Studio 2015\Projects\BlackJack\BlackJackUnitTestProject\bin\Debug\BlackJackUnitTestProject.pdb
+C:\Users\eido\Documents\Visual Studio 2015\Projects\BlackJack\BlackJackUnitTestProject\bin\Debug\BlackJack.exe
+C:\Users\eido\Documents\Visual Studio 2015\Projects\BlackJack\BlackJackUnitTestProject\bin\Debug\BlackJack.pdb
+C:\Users\eido\Documents\Visual Studio 2015\Projects\BlackJack\BlackJackUnitTestProject\obj\Debug\BlackJackUnitTestProject.csprojResolveAssemblyReference.cache
+C:\Users\eido\Documents\Visual Studio 2015\Projects\BlackJack\BlackJackUnitTestProject\obj\Debug\BlackJackUnitTestProject.dll
+C:\Users\eido\Documents\Visual Studio 2015\Projects\BlackJack\BlackJackUnitTestProject\obj\Debug\BlackJackUnitTestProject.pdb
+C:\Users\eido\Documents\Visual Studio 2015\Projects\BlackJack\BlackJackUnitTestProject\bin\Debug\BlackJack.xml
+C:\Users\eido\Documents\Visual Studio 2015\Projects\BlackJack\BlackJackUnitTestProject\bin\Debug\BlackJackUnitTestProject.XML

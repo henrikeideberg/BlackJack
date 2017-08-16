@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NumberOfResplits>-1</NumberOfResplits>
+  <NumberOfSplitsOnAces>5</NumberOfSplitsOnAces>
+  <NumberOfCardsAfterSplitAces>5</NumberOfCardsAfterSplitAces>
+  <AllowDoubleOnSplitAces>true</AllowDoubleOnSplitAces>
+  <AllowDoubleAfterSplit>true</AllowDoubleAfterSplit>
+  <AllowDoubleOnSoftHands>true</AllowDoubleOnSoftHands>
+  <DoubleMin>1</DoubleMin>
+  <DoubleMax>21</DoubleMax>
+  <DealerWinsAtTie>false</DealerWinsAtTie>
+</TableRules>

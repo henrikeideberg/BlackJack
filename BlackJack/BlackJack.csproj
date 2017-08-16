@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11847531-3EE0-4E0F-8941-F223447899F7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BlackJack</RootNamespace>
+    <AssemblyName>BlackJack</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\BlackJack.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AbstractClasses\BasicEvent.cs" />
+    <Compile Include="AbstractClasses\Participant.cs" />
+    <Compile Include="EventClasses\DeckCreatedEvent.cs" />
+    <Compile Include="EventClasses\DeckShuffledEvent.cs" />
+    <Compile Include="EventClasses\GameStartStopEvent.cs" />
+    <Compile Include="EventClasses\HumanPlayerActionEvent.cs" />
+    <Compile Include="EventClasses\ParticipantEvent.cs" />
+    <Compile Include="EventClasses\AllHandsEvent.cs" />
+    <Compile Include="Forms\ComputerPlayerSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ComputerPlayerSetup.Designer.cs">
+      <DependentUpon>ComputerPlayerSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DealerSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DealerSetup.Designer.cs">
+      <DependentUpon>DealerSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PlayerSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlayerSetup.Designer.cs">
+      <DependentUpon>PlayerSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\IParticipant.cs" />
+    <Compile Include="ObjectClasses\ComputerPlayer.cs" />
+    <Compile Include="ObjectClasses\Dealer.cs" />
+    <Compile Include="ObjectClasses\Deck.cs" />
+    <Compile Include="ObjectClasses\Hand.cs" />
+    <Compile Include="ObjectClasses\HumanPlayer.cs" />
+    <Compile Include="RulesClasses\PlayerRules.cs" />
+    <Compile Include="Types\ListViewLogItem.cs" />
+    <Compile Include="ObjectClasses\Table.cs" />
+    <Compile Include="RulesClasses\TableRules.cs" />
+    <Compile Include="Types\ActionType.cs" />
+    <Compile Include="Utility\Convertions.cs" />
+    <Compile Include="Utility\EvaluatePlayerHand.cs" />
+    <Compile Include="Utility\EvaluateWinningHand.cs" />
+    <Compile Include="Utility\ListManager.cs" />
+    <Compile Include="Utility\UserCommunication.cs" />
+    <Compile Include="Utility\WriteFileUtility.cs" />
+    <Compile Include="Utility\XMLSerializerUtility.cs" />
+    <Compile Include="Windows\HumanPlayerWindow.xaml.cs">
+      <DependentUpon>HumanPlayerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\TableRulesWindow.xaml.cs">
+      <DependentUpon>TableRulesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\TableWindow.xaml.cs">
+      <DependentUpon>TableWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Windows\HumanPlayerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\TableRulesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\TableWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Forms\ComputerPlayerSetup.resx">
+      <DependentUpon>ComputerPlayerSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DealerSetup.resx">
+      <DependentUpon>DealerSetup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlayerSetup.resx">
+      <DependentUpon>PlayerSetup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

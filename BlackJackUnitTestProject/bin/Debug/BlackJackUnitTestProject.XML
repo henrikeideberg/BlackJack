@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BlackJackUnitTestProject</name>
+    </assembly>
+    <members>
+        <member name="M:BlackJackUnitTestProject.DealerUnitTest.CreateDealer(System.Int32,System.Boolean)">
+            <summary>
+            Wrapper method to create a dealer.
+            </summary>
+            <param name="standOn"></param>
+            <param name="drawOnSoft"></param>
+        </member>
+        <member name="M:BlackJackUnitTestProject.DeckUnitTest.DrawCards(System.Int32)">
+            <summary>
+            Draw int nrOfCards from m_deck.
+            </summary>
+            <param name="nrOfCards"></param>
+        </member>
+        <member name="M:BlackJackUnitTestProject.DeckUnitTest.ValidateCardsInDeck(System.Int32)">
+            <summary>
+            Method to check that created deck
+            has correct number of cards.
+            </summary>
+            <param name="nrOfDecks"></param>
+        </member>
+        <member name="T:BlackJackUnitTestProject.EvaluatePlayerHandUnitTest">
+            <summary>
+            Summary description for EvaluatePlayerHandUnitTest
+            </summary>
+        </member>
+        <member name="P:BlackJackUnitTestProject.EvaluatePlayerHandUnitTest.TestContext">
+             <summary>
+            Gets or sets the test context which provides
+            information about and functionality for the current test run.
+            </summary>
+        </member>
+        <member name="P:BlackJackUnitTestProject.HandUnitTest.TestContext">
+             <summary>
+            Gets or sets the test context which provides
+            information about and functionality for the current test run.
+            </summary>
+        </member>
+        <member name="T:BlackJackUnitTestProject.HumanPlayerUnitTest">
+            <summary>
+            Summary description for HumanPlayerUnitTest
+            </summary>
+        </member>
+        <member name="P:BlackJackUnitTestProject.HumanPlayerUnitTest.TestContext">
+             <summary>
+            Gets or sets the test context which provides
+            information about and functionality for the current test run.
+            </summary>
+        </member>
+        <member name="T:BlackJackUnitTestProject.TableUnitTest">
+            <summary>
+            Summary description for TableUnitTest
+            </summary>
+        </member>
+        <member name="P:BlackJackUnitTestProject.TableUnitTest.TestContext">
+             <summary>
+            Gets or sets the test context which provides
+            information about and functionality for the current test run.
+            </summary>
+        </member>
+        <member name="M:BlackJackUnitTestProject.TableUnitTest.onDeckCreatedReceived(System.Object,BlackJack.DeckCreatedEvent)">
+            <summary>
+            Methid to verify the deckCreatedEvent (type: DeckCreatedEvent)
+            </summary>
+            <param name="sender"></param>
+            <param name="deckCreatedEventInfo"></param>
+        </member>
+        <member name="M:BlackJackUnitTestProject.TableUnitTest.onDeckShuffledReceived(System.Object,BlackJack.DeckShuffledEvent)">
+            <summary>
+            Method to verify the deckShuffledEvent (type: DeckShuffledEvent)
+            </summary>
+            <param name="sender"></param>
+            <param name="deckShuffledEventInfo"></param>
+        </member>
+        <member name="M:BlackJackUnitTestProject.TableUnitTest.onParticipantConnectedEvent(System.Object,BlackJack.ParticipantEvent)">
+            <summary>
+            Method to verify the ParticipantConnectedEvent.
+            </summary>
+            <param name="sender"></param>
+            <param name="participantConnectedInfo"></param>
+        </member>
+    </members>
+</doc>
